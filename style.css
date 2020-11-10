@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+#main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.img-section {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+.img-section:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(225deg, #86aaad, #121923);
+  z-index: 1;
+  mix-blend-mode: screen;
+}
+
+.img-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+.content .form-box {
+  width: 50%;
+}
+
+.content .form-box h2 {
+  color: #435b6e;
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  border-bottom: 4px solid #0c080c;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.content .form-box form .inputBx {
+  margin-bottom: 20px;
+}
+
+.content .form-box form .inputBx label {
+  display: block;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: #435b6e;
+  margin-bottom: 0.2rem;
+}
+
+.content .form-box form .inputBx input {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 30px;
+  outline: none;
+  background: transparent;
+  border: 1px solid #000000;
+  font-weight: 600;
+}
+
+.content .form-box form .remember {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #435b6e;
+  margin-top: 10px;
+}
+
+.content .form-box form .inputBx input[type='submit'] {
+  background-color: #435b6e;
+  border: none;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  outline: none;
+}
+
+.content .form-box form .inputBx input[type='submit']:hover {
+  background-color: #7f96a1;
+}
+
+.content .form-box form p {
+  color: #7f96a1;
+  font-size: 1rem;
+  font-weight: 550;
+  letter-spacing: 1px;
+}
+
+.content .form-box form p a {
+  color: #131212;
+}
+
+.content .form-box h3 {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 550;
+  color: #7f96a1;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.content .form-box .social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .form-box .social-links li {
+  display: inline-block;
+  list-style-type: none;
+
+  background-color: #7f96a1;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 6px;
+  padding-top: 1.5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .form-box .social-links li img {
+  transform: scale(0.5);
+  filter: invert(1);
+  margin-top: 4px;
+  margin-left: 1px;
+}
+
+.content .form-box .social-links li:hover {
+  background-color: #41697c;
+}
+
+@media (max-width: 768px) {
+  #main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .img-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  .content .form-box {
+    width: 80%;
+  }
+  .form-box {
+    background-color: rgb(255, 255, 255);
+    padding: 2rem 4rem;
+    z-index: 1;
+  }
+
+  .img-section:before {
+    background: none;
+  }
+  .img-section img {
+    opacity: 0.6;
+  }
+
+  .content .form-box .social-links li {
+    width: 40px;
+    height: 40px;
+  }
+  .content .form-box .social-links li img {
+    transform: scale(0.4);
+  }
+}
+
+@media (max-width: 500px) {
+  .content .form-box h2 {
+    display: block;
+    margin: auto;
+    width: 24%;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #000000;
+  }
+  .content .form-box form .inputBx label {
+    text-align: center;
+  }
+  .content .form-box {
+    width: 90%;
+    padding: 2rem 2rem;
+  }
+
+  .content .form-box form p {
+    font-size: 1rem;
+    letter-spacing: normal;
+  }
+}
